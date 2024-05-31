@@ -1,4 +1,5 @@
 
+import css from "./SearchBox.module.css"
 
 const SearchBox = ({ changeFilter, filter }) => {
     const handleChange = (e) => {
@@ -6,8 +7,15 @@ const SearchBox = ({ changeFilter, filter }) => {
     } 
 
   return (
-      <div><input type="text" value={filter} onChange={handleChange} /></div>
-  )
+    <div>
+      <input
+        className={css.searchBox}
+        type="text"
+        value={filter}
+        onChange={handleChange}
+      />
+    </div>
+  );
 }
 
 export default SearchBox

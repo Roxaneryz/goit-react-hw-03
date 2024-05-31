@@ -37,21 +37,29 @@ const ContactForm = ({ addContact }) => {
     
   return (
     <Formik
-      className={css.contactForm}
       initialValues={initialValues}
       onSubmit={handleSubmit}
       validationSchema={contactsSchema}
     >
-      <Form>
+      <Form className={css.contactForm}>
+      
         <label htmlFor={nameId}>Name</label>
         <Field type="text" name="name" id={nameId} />
-        <ErrorMessage name="name" component="span" />
-
+        <ErrorMessage
+          name="name"
+          component="span"
+          className={css.errorMessage}
+        />
         <label htmlFor={numberId}>Number</label>
         <Field type="text" name="number" id={numberId} />
-        <ErrorMessage name="nunber" component="span" />
-
-        <button type="submit">Add Contact</button>
+        <ErrorMessage
+          name="nunber"
+          component="span"
+          className={css.errorMessage}
+        />
+        <button className={css.btnSubmit} type="submit">
+          Add Contact
+        </button>
       </Form>
     </Formik>
   );

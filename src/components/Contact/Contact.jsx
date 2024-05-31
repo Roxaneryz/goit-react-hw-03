@@ -1,7 +1,7 @@
 
 import { FaUserAlt, FaPhoneVolume } from "react-icons/fa";
 
-
+import css from "./Contact.module.css"
 
 const Contact = ({ id, name, number, deleteContact }) => {
     const handleClick = () => {
@@ -9,7 +9,7 @@ const Contact = ({ id, name, number, deleteContact }) => {
     }
 
   return (
-    <div>
+    <div className={css.contact}>
       <p>
         <FaUserAlt />: {name}{" "}
       </p>
