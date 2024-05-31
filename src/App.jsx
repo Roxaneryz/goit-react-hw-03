@@ -53,7 +53,7 @@ console.log(filteredContacts())
 
       <h1>PhoneBook</h1>
       <ContactForm addContact={addContact} />
-      <p>Find your contact by name or number</p>
+      <h3>Find your contact by name or number</h3>
       <SearchBox filter={filter} changeFilter={changeFilter} />
       <ContactList contacts={filteredContacts()} deleteContact={deleteContact} />
 
